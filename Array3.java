@@ -31,5 +31,6 @@ public class Array3{
     public static void main(String[] args) {
         int a[] = {3,3,5,3,2,7,3,3};
         System.out.println(majorityElement(a));
+        
     }
 }

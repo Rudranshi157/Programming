@@ -69,17 +69,16 @@ public class Array1{
         reverse(nums ,  (k%nums.length) , nums.length-1);
     }
 
-    // 26. Remove Duplicates from Sorted Array
-    public int removeDuplicates(int[] nums) {
-       int idx=0;
-       for(int i=0; i<nums.length; i++){
-            while(nums.length>i+1 && nums[i]==nums[i+1]){
-                i++;
-            }
-            nums[idx]= nums[i];
-            idx++;
-       }
-       return idx;
+    //Given an array/list 'ARR' of integers and a position ‘M’. You have to reverse the array after that position.
+    public static void reverseArray(ArrayList<Integer> arr, int m)
+    {
+        
+        // Write your code here.
+        for(int i=0, j=m+1 ; i<(arr.size()-m)/2; i++,j++){
+            Integer temp = arr.get(j);
+            arr.set(j,arr.get(arr.size()-i-1));
+            arr.set(arr.size()-i-1, temp) ;
+        }
     }
     
     public static void main(String[] args) {

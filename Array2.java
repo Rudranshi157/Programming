@@ -30,5 +30,6 @@ public class Array2{
         int Arr[] = {1,1,2,3,4,4,5,2};
         int arr2[] = {1,1,0};
         findRepeatingEle(arr2);
+        
     }
 }

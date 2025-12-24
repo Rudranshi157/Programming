@@ -38,6 +38,13 @@ public class BinaryTree{
         return arr;
 
     }
+
+    //TOWER OF HANOI
+    public int towerOfHanoi(int n, int from, int to, int aux) {
+        if(n == 1 || n==0) return n;
+        int a = 1+towerOfHanoi(n-1, from, aux, to);
+        return a + towerOfHanoi(n-1, aux, to, from);
+    }
     public static void main(String[] args) {
         
     }
