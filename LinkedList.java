@@ -1,4 +1,11 @@
 public class LinkedList{
+    class Node{
+        int val;
+        Node next;
+        void Node(int val){
+            this.val = val;
+        }
+    }
     //searching elements in a matrix 
     // time complexity O(n+m)
     // space complexity O(1)
@@ -71,6 +78,29 @@ public class LinkedList{
         }
         int ans[] = {row, count};
         return ans;
+    }
+
+    //237. Delete Node in a Linked List
+
+    // approach 1
+    // tc O(n) 
+    //sc O(1)
+    public void deleteNode(Node node) {
+        Node prev = null;
+        while(node.next != null){
+            node.val = node.next.val;
+            prev = node;
+            node = node.next;
+        }
+        prev.next = null;
+    }
+
+    //approach 2
+    //tc O(1)
+    //sc O(1)
+    public static void deleteNode2(Node node){
+        node.val = node.next.val;
+        node.next = node.next.next;
     }
     public static void main(String args[]){
 
